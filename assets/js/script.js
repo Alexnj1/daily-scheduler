@@ -61,6 +61,13 @@ function loadEvents () {
     else {
     $('#eventNine').val(eventSave[0].savedevent);
     $('#eventTen').val(eventSave[1].savedevent);
+    $('#eventEleven').val(eventSave[2].savedevent);
+    $('#eventTwelve').val(eventSave[3].savedevent);
+    $('#eventOne').val(eventSave[4].savedevent);
+    $('#eventTwo').val(eventSave[5].savedevent);
+    $('#eventThree').val(eventSave[6].savedevent);
+    $('#eventFour').val(eventSave[7].savedevent);
+    $('#eventFive').val(eventSave[8].savedevent);
     }
 }
 
@@ -108,6 +115,160 @@ $('#eventDeleteTen').on('click', function() {
     saveEvent()
 }).on('mouseout', function() {
     $('#eventTen').trigger('blur')
+})
+
+$('#eventEleven').on('blur', function() {
+    var eventText = $(this).val()
+    var eventTime = $('.timeEleven').text()
+
+    eventSave[2].savedevent = eventText
+    eventSave[2].time = eventTime
+    console.log(eventSave)
+    
+    saveEvent()
+})
+
+$('#eventDeleteEleven').on('click', function() {
+    $('#eventEleven').trigger('focus')
+    var eventText = $('#eventEleven').val('')
+
+    eventSave[2].savedevent = eventText
+
+    saveEvent()
+}).on('mouseout', function() {
+    $('#eventEleven').trigger('blur')
+})
+
+$('#eventTwelve').on('blur', function() {
+    var eventText = $(this).val()
+    var eventTime = $('.timeTwelve').text()
+
+    eventSave[3].savedevent = eventText
+    eventSave[3].time = eventTime
+    console.log(eventSave)
+    
+    saveEvent()
+})
+
+$('#eventDeleteTwelve').on('click', function() {
+    $('#eventTwelve').trigger('focus')
+    var eventText = $('#eventTwelve').val('')
+
+    eventSave[3].savedevent = eventText
+
+    saveEvent()
+}).on('mouseout', function() {
+    $('#eventTwelve').trigger('blur')
+})
+
+$('#eventOne').on('blur', function() {
+    var eventText = $(this).val()
+    var eventTime = $('.timeOne').text()
+
+    eventSave[4].savedevent = eventText
+    eventSave[4].time = eventTime
+    console.log(eventSave)
+    
+    saveEvent()
+})
+
+$('#eventDeleteOne').on('click', function() {
+    $('#eventOne').trigger('focus')
+    var eventText = $('#eventOne').val('')
+
+    eventSave[4].savedevent = eventText
+
+    saveEvent()
+}).on('mouseout', function() {
+    $('#eventOne').trigger('blur')
+})
+
+$('#eventTwo').on('blur', function() {
+    var eventText = $(this).val()
+    var eventTime = $('.timeTwo').text()
+
+    eventSave[5].savedevent = eventText
+    eventSave[5].time = eventTime
+    console.log(eventSave)
+    
+    saveEvent()
+})
+
+$('#eventDeleteTwo').on('click', function() {
+    $('#eventTwo').trigger('focus')
+    var eventText = $('#eventTwo').val('')
+
+    eventSave[5].savedevent = eventText
+
+    saveEvent()
+}).on('mouseout', function() {
+    $('#eventTwo').trigger('blur')
+})
+
+$('#eventThree').on('blur', function() {
+    var eventText = $(this).val()
+    var eventTime = $('.timeThree').text()
+
+    eventSave[6].savedevent = eventText
+    eventSave[6].time = eventTime
+    console.log(eventSave)
+    
+    saveEvent()
+})
+
+$('#eventDeleteThree').on('click', function() {
+    $('#eventThree').trigger('focus')
+    var eventText = $('#eventThree').val('')
+
+    eventSave[6].savedevent = eventText
+
+    saveEvent()
+}).on('mouseout', function() {
+    $('#eventThree').trigger('blur')
+})
+
+$('#eventFour').on('blur', function() {
+    var eventText = $(this).val()
+    var eventTime = $('.timeFour').text()
+
+    eventSave[7].savedevent = eventText
+    eventSave[7].time = eventTime
+    console.log(eventSave)
+    
+    saveEvent()
+})
+
+$('#eventDeleteFour').on('click', function() {
+    $('#eventFour').trigger('focus')
+    var eventText = $('#eventFour').val('')
+
+    eventSave[7].savedevent = eventText
+
+    saveEvent()
+}).on('mouseout', function() {
+    $('#eventFour').trigger('blur')
+})
+
+$('#eventFive').on('blur', function() {
+    var eventText = $(this).val()
+    var eventTime = $('.timeFive').text()
+
+    eventSave[8].savedevent = eventText
+    eventSave[8].time = eventTime
+    console.log(eventSave)
+    
+    saveEvent()
+})
+
+$('#eventDeleteFive').on('click', function() {
+    $('#eventFive').trigger('focus')
+    var eventText = $('#eventFive').val('')
+
+    eventSave[8].savedevent = eventText
+
+    saveEvent()
+}).on('mouseout', function() {
+    $('#eventFive').trigger('blur')
 })
 
 
