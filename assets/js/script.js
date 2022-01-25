@@ -1,7 +1,3 @@
-// var eventSave = [
-    
-// ]
-
 function currentDateTime () {
     setInterval(() => {
       var time = moment().format('MMMM Do YYYY, h:mm:ss a');
@@ -69,7 +65,22 @@ function loadEvents () {
     $('#eventFour').val(eventSave[7].savedevent);
     $('#eventFive').val(eventSave[8].savedevent);
     }
+    
 }
+
+$('#deleteAll').on('click', function(){
+    eventSave = JSON.parse(localStorage.getItem('events'))
+    $('#eventNine').val(null).trigger('focus').trigger('blur');
+    $('#eventTen').val(null).trigger('focus').trigger('blur');
+    $('#eventEleven').val(null).trigger('focus').trigger('blur');
+    $('#eventTwelve').val(null).trigger('focus').trigger('blur');
+    $('#eventOne').val(null).trigger('focus').trigger('blur');
+    $('#eventTwo').val(null).trigger('focus').trigger('blur');
+    $('#eventThree').val(null).trigger('focus').trigger('blur');
+    $('#eventFour').val(null).trigger('focus').trigger('blur');
+    $('#eventFive').val(null).trigger('focus').trigger('blur');
+    saveEvent()
+})
 
 
 
