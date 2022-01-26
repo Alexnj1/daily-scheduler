@@ -82,39 +82,7 @@ $('#deleteAll').on('click', function(){
     saveEvent()
 })
 
-function audit () {
-    var audit = moment().format('hh:00 a')
-    // new Date().getHours()
-    console.log (audit)
-    // var test = $('.input-group-text').text()
-    // console.log (test)
 
-    // if(audit == $('.input-group-text').text()) {
-    //     console.log('present')
-    //     // $('input').addClass('.present')
-    // }else if (audit > $('input-group-text').text()) {
-    //     console.log('past')
-    //     // $('input').addClass('.bg-primary')
-    // }else if (audit < $('input-group-text').text()) {
-    //     // $('input').addClass('.future')
-    //     console.log('future')
-    // }
-
-    // eventSave = JSON.parse(localStorage.getItem('events'))
-    var test2 = $('input')
-    console.log($('.timeFive').text())
-
-    if (audit == $('.timeNine').text()) {
-        console.log('present')
-    }else if (audit < $('.timeNine').text()) {
-        console.log ("past")
-    }else if (audit > $('.timeNine').text()) {
-        console.log ("future")
-    }
-        
-    
-    
-}
 
 $('#eventNine').on('blur', function() {
     var eventText = $(this).val()
@@ -317,4 +285,56 @@ loadEvents()
 
 
 
-audit()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Unfinished auditing function for time-block time of day. 
+// Disregard.
+
+
+
+// function audit () {
+//     var audit = moment().format('hh:00 a')
+//     // new Date().getHours()
+//     console.log (audit)
+//     // var test = $('.input-group-text').text()
+//     // console.log (test)
+
+//     // if(audit == $('.input-group-text').text()) {
+//     //     console.log('present')
+//     //     // $('input').addClass('.present')
+//     // }else if (audit > $('input-group-text').text()) {
+//     //     console.log('past')
+//     //     // $('input').addClass('.bg-primary')
+//     // }else if (audit < $('input-group-text').text()) {
+//     //     // $('input').addClass('.future')
+//     //     console.log('future')
+//     // }
+
+//     // eventSave = JSON.parse(localStorage.getItem('events'))
+//     var test2 = $('input')
+//     console.log($('.timeFive').text())
+
+//     if (audit == $('.timeNine').text()) {
+//         console.log('present')
+//     }else if (audit < $('.timeNine').text()) {
+//         console.log ("past")
+//     }else if (audit > $('.timeNine').text()) {
+//         console.log ("future")
+//     }
+        
+    
+    
+// }  audit()
