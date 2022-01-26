@@ -82,7 +82,39 @@ $('#deleteAll').on('click', function(){
     saveEvent()
 })
 
+function audit () {
+    var audit = moment().format('hh:00 a')
+    // new Date().getHours()
+    console.log (audit)
+    // var test = $('.input-group-text').text()
+    // console.log (test)
 
+    // if(audit == $('.input-group-text').text()) {
+    //     console.log('present')
+    //     // $('input').addClass('.present')
+    // }else if (audit > $('input-group-text').text()) {
+    //     console.log('past')
+    //     // $('input').addClass('.bg-primary')
+    // }else if (audit < $('input-group-text').text()) {
+    //     // $('input').addClass('.future')
+    //     console.log('future')
+    // }
+
+    // eventSave = JSON.parse(localStorage.getItem('events'))
+    var test2 = $('input')
+    console.log($('.timeFive').text())
+
+    if (audit == $('.timeNine').text()) {
+        console.log('present')
+    }else if (audit < $('.timeNine').text()) {
+        console.log ("past")
+    }else if (audit > $('.timeNine').text()) {
+        console.log ("future")
+    }
+        
+    
+    
+}
 
 $('#eventNine').on('blur', function() {
     var eventText = $(this).val()
@@ -112,7 +144,6 @@ $('#eventTen').on('blur', function() {
 
     eventSave[1].savedevent = eventText
     eventSave[1].time = eventTime
-    console.log(eventSave)
     
     saveEvent()
 })
@@ -134,7 +165,6 @@ $('#eventEleven').on('blur', function() {
 
     eventSave[2].savedevent = eventText
     eventSave[2].time = eventTime
-    console.log(eventSave)
     
     saveEvent()
 })
@@ -156,7 +186,6 @@ $('#eventTwelve').on('blur', function() {
 
     eventSave[3].savedevent = eventText
     eventSave[3].time = eventTime
-    console.log(eventSave)
     
     saveEvent()
 })
@@ -178,7 +207,6 @@ $('#eventOne').on('blur', function() {
 
     eventSave[4].savedevent = eventText
     eventSave[4].time = eventTime
-    console.log(eventSave)
     
     saveEvent()
 })
@@ -200,7 +228,6 @@ $('#eventTwo').on('blur', function() {
 
     eventSave[5].savedevent = eventText
     eventSave[5].time = eventTime
-    console.log(eventSave)
     
     saveEvent()
 })
@@ -222,7 +249,6 @@ $('#eventThree').on('blur', function() {
 
     eventSave[6].savedevent = eventText
     eventSave[6].time = eventTime
-    console.log(eventSave)
     
     saveEvent()
 })
@@ -244,7 +270,6 @@ $('#eventFour').on('blur', function() {
 
     eventSave[7].savedevent = eventText
     eventSave[7].time = eventTime
-    console.log(eventSave)
     
     saveEvent()
 })
@@ -266,7 +291,6 @@ $('#eventFive').on('blur', function() {
 
     eventSave[8].savedevent = eventText
     eventSave[8].time = eventTime
-    console.log(eventSave)
     
     saveEvent()
 })
@@ -282,7 +306,15 @@ $('#eventDeleteFive').on('click', function() {
     $('#eventFive').trigger('blur')
 })
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
 
 currentDateTime()
 
 loadEvents()
+
+
+
+audit()
